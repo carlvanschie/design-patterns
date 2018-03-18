@@ -1,4 +1,5 @@
 rootProject.name = 'design-patterns'
 include 'visitor'
 include 'state'
+include 'command'
 
