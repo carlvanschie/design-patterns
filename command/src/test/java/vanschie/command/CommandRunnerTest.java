@@ -29,7 +29,7 @@ public class CommandRunnerTest {
     }
 
     @Test
-    public void commandRunnerDoesRunElement() {
+    public void canRunElement() {
         commandRunner.add(commandPatternImpl);
         commandRunner.run();
 
@@ -37,7 +37,16 @@ public class CommandRunnerTest {
     }
 
     @Test
-    public void commandRunnerDoesRunMultipleElements() {
+    public void canRunTheSameElementMoreThanOnce() {
+        commandRunner.add(commandPatternImpl);
+        commandRunner.add(commandPatternImpl);
+        commandRunner.run();
+
+        verify(commandPatternImpl, times(2)).run();
+    }
+
+    @Test
+    public void canRunMultipleElements() {
         commandRunner.add(commandPatternImpl);
         commandRunner.add(commandPatternImplTwo);
         commandRunner.add(commandPatternImpl);
