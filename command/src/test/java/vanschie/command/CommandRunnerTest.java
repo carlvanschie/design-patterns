@@ -56,4 +56,13 @@ public class CommandRunnerTest {
         verify(commandPatternImplTwo).run();
     }
 
+    @Test
+    public void removesElementsOnceRun() {
+        commandRunner.add(commandPatternImpl);
+        assertThat(commandRunner.pending(), is (1));
+
+        commandRunner.run();
+        assertThat(commandRunner.pending(), is (0));
+    }
+
 }
