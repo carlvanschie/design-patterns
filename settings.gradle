@@ -3,4 +3,5 @@ include 'visitor'
 include 'state'
 include 'command'
 include 'prototype'
+include 'singleton'
 
