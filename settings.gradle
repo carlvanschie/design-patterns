@@ -1,7 +1,5 @@
 rootProject.name = 'design-patterns'
-include 'visitor'
-include 'state'
-include 'command'
-include 'prototype'
-include 'singleton'
+include 'creational'
+include 'behavioral'
+include 'structural'
 
