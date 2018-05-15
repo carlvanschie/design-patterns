@@ -6,10 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import vanschie.structural.proxy.NastyExpensiveScanRestClient;
-import vanschie.structural.proxy.Scan;
-import vanschie.structural.proxy.ScanImpProxy;
-import vanschie.structural.proxy.ScanState;
 
 import java.util.UUID;
 
