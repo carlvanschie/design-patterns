@@ -1,4 +1,4 @@
-package vanschie.proxy;
+package vanschie.structural.proxy;
 
 public enum ScanState {
 

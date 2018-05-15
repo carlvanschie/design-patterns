@@ -1,5 +1,6 @@
-package vanschie.proxy;
+package vanschie.structural.proxy;
 
+import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.*;
-import static vanschie.proxy.ScanState.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ScanTest {
@@ -34,7 +34,7 @@ public class ScanTest {
     @Test
     public void canCreateScan() {
         assertThat(scan.getName(), is(NAME));
-        assertThat(scan.getState(), is(NEW));
+        assertThat(scan.getState(), Is.is(ScanState.NEW));
         verify(nastyApiClient,  never()).create();
     }
 
@@ -48,7 +48,7 @@ public class ScanTest {
     public void canStartScan() {
         scan.start();
 
-        assertThat(scan.getState(), is(RUNNING));
+        assertThat(scan.getState(), Is.is(ScanState.RUNNING));
         verify(nastyApiClient).create();
         verify(nastyApiClient).start();
     }
@@ -58,7 +58,7 @@ public class ScanTest {
         scan.start();
         scan.stop();
 
-        assertThat(scan.getState(), is(STOPPED));
+        assertThat(scan.getState(), Is.is(ScanState.STOPPED));
         verify(nastyApiClient).stop();
 
     }
@@ -84,7 +84,7 @@ public class ScanTest {
         scan.start();
         scan.delete();
 
-        assertThat(scan.getState(), is(DELETED));
+        assertThat(scan.getState(), Is.is(ScanState.DELETED));
     }
 
     @Test
@@ -101,13 +101,13 @@ public class ScanTest {
         scan.stop();
         scan.delete();
 
-        assertThat(scan.getState(), is(DELETED));
+        assertThat(scan.getState(), Is.is(ScanState.DELETED));
     }
 
     @Test
     public void canDeleteNewScan() {
         scan.delete();
-        assertThat(scan.getState(), is(DELETED));
+        assertThat(scan.getState(), Is.is(ScanState.DELETED));
     }
 
     @Test
@@ -125,7 +125,7 @@ public class ScanTest {
         } catch(IllegalStateException e) {
             //Gulp
         }
-        assertThat(scan.getState(), is(DELETED));
+        assertThat(scan.getState(), Is.is(ScanState.DELETED));
     }
 
     @Test
@@ -133,7 +133,7 @@ public class ScanTest {
         scan.start();
         scan.stop();
         scan.start();
-        assertThat(scan.getState(), is(RUNNING));
+        assertThat(scan.getState(), Is.is(ScanState.RUNNING));
     }
 
     @Test
@@ -147,7 +147,7 @@ public class ScanTest {
             //Gulp
         }
 
-        assertThat(scan.getState(), is(DELETED));
+        assertThat(scan.getState(), Is.is(ScanState.DELETED));
 
         verify(nastyApiClient, never()).create();
     }
