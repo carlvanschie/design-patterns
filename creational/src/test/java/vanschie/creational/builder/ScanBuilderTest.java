@@ -1,10 +1,6 @@
 package vanschie.creational.builder;
 
-import vanschie.creational.builder.Scan;
-import vanschie.creational.builder.ScanBuilder;
 import org.junit.Test;
-import vanschie.creational.creational.builder.Scan;
-import vanschie.creational.creational.builder.ScanBuilder;
 
 import java.util.Date;
 

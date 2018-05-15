@@ -1,6 +1,5 @@
 package vanschie.creational.singleton;
 
-import creational.singleton.Singleton;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

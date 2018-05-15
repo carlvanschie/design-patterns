@@ -1,6 +1,5 @@
 package vanschie.creational.prototype;
 
-import vanschie.creational.prototype.PrototypeClass;
 import org.junit.Before;
 import org.junit.Test;
 

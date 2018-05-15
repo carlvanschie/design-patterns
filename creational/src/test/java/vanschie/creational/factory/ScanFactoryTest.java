@@ -1,7 +1,5 @@
 package vanschie.creational.factory;
 
-import vanschie.creational.creational.factory.Scan;
-import vanschie.creational.creational.factory.ScanFactory;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
