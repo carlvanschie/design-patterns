@@ -32,7 +32,7 @@ public class ScanImpProxy implements Scan {
 
     @Override
     public ScanState getState() {
-        if(scan == null) {
+        if (scan == null) {
             return scanState;
         }
         return scan.getState();
@@ -40,7 +40,7 @@ public class ScanImpProxy implements Scan {
 
     @Override
     public void start() {
-        if(scanState == ScanState.DELETED) {
+        if (scanState == ScanState.DELETED) {
             throw new IllegalStateException();
         }
         createScanIfNull();
@@ -49,7 +49,7 @@ public class ScanImpProxy implements Scan {
 
     @Override
     public void stop() {
-        if(scan == null) {
+        if (scan == null) {
             throw new IllegalStateException();
         }
         scan.stop();
@@ -57,7 +57,7 @@ public class ScanImpProxy implements Scan {
 
     @Override
     public void delete() {
-        if(scan != null) {
+        if (scan != null) {
             scan.delete();
         }
         scanState = ScanState.DELETED;

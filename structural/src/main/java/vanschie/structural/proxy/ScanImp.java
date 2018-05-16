@@ -52,7 +52,7 @@ public class ScanImp implements Scan {
 
     @Override
     public void delete() {
-        if(state == ScanState.RUNNING) {
+        if (state == ScanState.RUNNING) {
             stop();
         }
 

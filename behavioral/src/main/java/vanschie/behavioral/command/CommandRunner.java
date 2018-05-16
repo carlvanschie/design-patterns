@@ -17,7 +17,7 @@ public class CommandRunner {
 
     public void run() {
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             CommandPattern commandPattern = queue.remove(0);
             commandPattern.run();
         }

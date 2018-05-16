@@ -24,7 +24,7 @@ public class CommandRunnerTest {
     @Test
     public void canBeGivenSomeThingToRun() {
         commandRunner.add(commandPatternImpl);
-        assertThat(commandRunner.pending(), is (1));
+        assertThat(commandRunner.pending(), is(1));
     }
 
     @Test
@@ -58,10 +58,10 @@ public class CommandRunnerTest {
     @Test
     public void removesElementsOnceRun() {
         commandRunner.add(commandPatternImpl);
-        assertThat(commandRunner.pending(), is (1));
+        assertThat(commandRunner.pending(), is(1));
 
         commandRunner.run();
-        assertThat(commandRunner.pending(), is (0));
+        assertThat(commandRunner.pending(), is(0));
     }
 
 }

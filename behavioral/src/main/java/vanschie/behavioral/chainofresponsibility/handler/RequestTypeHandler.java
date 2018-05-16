@@ -12,11 +12,11 @@ public class RequestTypeHandler implements RequestHandler {
     }
 
     @Override
-    public void handle(Request request, Response response) {
+    public void handle(final Request request, final Response response) {
         String type = request.getType();
         response.setType(type);
 
-        if("X".equalsIgnoreCase(type)) {
+        if ("X".equalsIgnoreCase(type)) {
             return;
         }
 

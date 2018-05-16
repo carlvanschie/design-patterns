@@ -13,16 +13,16 @@ public class Response {
         return header;
     }
 
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
     public boolean completed() {
         return true;
     }
 
     public String getType() {
         return type;
-    }
-
-    public void setHeader(String header) {
-        this.header = header;
     }
 
     public void setType(String type) {

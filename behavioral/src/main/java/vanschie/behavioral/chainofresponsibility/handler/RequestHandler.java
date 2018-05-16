@@ -5,6 +5,6 @@ import vanschie.behavioral.chainofresponsibility.Response;
 
 interface RequestHandler {
 
-    void handle(Request request, Response response);
+    void handle(final Request request, final Response response);
 
 }

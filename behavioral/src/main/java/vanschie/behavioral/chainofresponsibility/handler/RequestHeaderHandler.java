@@ -11,7 +11,7 @@ public class RequestHeaderHandler implements RequestHandler {
         this.requestHandler = requestHandler;
     }
 
-    public void handle(Request request, Response response) {
+    public void handle(final Request request, final Response response) {
         response.setHeader(request.getHeader() + ":" + request.getHeader());
         requestHandler.handle(request, response);
     }

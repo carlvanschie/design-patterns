@@ -35,7 +35,7 @@ public class ScanTest {
     public void canCreateScan() {
         assertThat(scan.getName(), is(NAME));
         assertThat(scan.getState(), Is.is(ScanState.NEW));
-        verify(nastyApiClient,  never()).create();
+        verify(nastyApiClient, never()).create();
     }
 
     @Test
@@ -76,7 +76,7 @@ public class ScanTest {
             // gulp
         }
 
-        verify(nastyApiClient,  never()).create();
+        verify(nastyApiClient, never()).create();
     }
 
     @Test
@@ -122,7 +122,7 @@ public class ScanTest {
         try {
             scan.start();
             fail("Should have thrown exception");
-        } catch(IllegalStateException e) {
+        } catch (IllegalStateException e) {
             //Gulp
         }
         assertThat(scan.getState(), Is.is(ScanState.DELETED));
@@ -143,7 +143,7 @@ public class ScanTest {
         try {
             scan.stop();
             fail("Should have thrown exception");
-        } catch(IllegalStateException e) {
+        } catch (IllegalStateException e) {
             //Gulp
         }
 
