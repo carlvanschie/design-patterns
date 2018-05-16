@@ -5,6 +5,8 @@ import vanschie.behavioral.chainofresponsibility.Response;
 
 public class RequestTypeHandler implements RequestHandler {
 
+    private static final String X = "X";
+
     private final RequestHandler requestHandler;
 
     public RequestTypeHandler(RequestHandler requestHandler) {
@@ -16,7 +18,7 @@ public class RequestTypeHandler implements RequestHandler {
         String type = request.getType();
         response.setType(type);
 
-        if ("X".equalsIgnoreCase(type)) {
+        if (X.equalsIgnoreCase(type)) {
             return;
         }
 
