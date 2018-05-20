@@ -1,4 +1,4 @@
-package vanschie.structural.observer;
+package vanschie.behavioral.observer;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package vanschie.structural.observer;
+package vanschie.behavioral.observer;
 
 import java.util.ArrayList;
 import java.util.List;

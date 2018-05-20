@@ -1,4 +1,4 @@
-package vanschie.structural.observer;
+package vanschie.behavioral.observer;
 
 public class SubjectObserverImp implements SubjectObserver {
 
