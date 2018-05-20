@@ -14,12 +14,14 @@ public class NastyExpensiveScanRestClient {
 
 
     public void stop() {
-
+        // Empty due to being an example class
     }
 
     public void start() {
+        // Empty due to being an example class
     }
 
     public void delete() {
+        // Empty due to being an example class
     }
 }

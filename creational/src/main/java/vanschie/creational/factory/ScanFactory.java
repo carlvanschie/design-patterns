@@ -5,6 +5,10 @@ public class ScanFactory {
     private static final String COMPLEX = "complex";
     private static final String SIMPLE = "simple";
 
+    private ScanFactory() {
+
+    }
+
     public static Scan createSimpleScan() {
         return new Scan(SIMPLE);
     }

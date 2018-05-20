@@ -11,6 +11,10 @@ public class Scan {
         this.scanState = new NewScanState();
     }
 
+    public String getName() {
+        return name;
+    }
+
     public ScanStatus getStatus() {
         return scanState.getStatus();
     }

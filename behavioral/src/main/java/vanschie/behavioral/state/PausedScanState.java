@@ -14,7 +14,7 @@ public class PausedScanState implements ScanState {
 
     @Override
     public void pause(Scan scan) {
-
+        // Empty due to being an example class
     }
 
     @Override

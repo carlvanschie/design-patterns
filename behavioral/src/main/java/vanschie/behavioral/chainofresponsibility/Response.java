@@ -7,6 +7,7 @@ public class Response {
     private String content = "";
 
     public Response() {
+        // Empty
     }
 
     public String getHeader() {
